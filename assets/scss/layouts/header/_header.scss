@@ -15,15 +15,19 @@
 //
 // -----------------------------------------------------------------------------
 
+$blue: #08A0F9;
+
 .header {
     background-color: $header-bg;
     border-bottom: container("border");
     position: fixed;
     top: 0;
     width: 100%;
+    height: 80px;
+    padding: 0 75px;
     z-index: zIndex("higher");
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
 
     @include breakpoint("medium") {
@@ -67,7 +71,7 @@
     }
 
     svg {
-        width: 200px;
+        width: 150px;
         height: auto;
     }
 
@@ -216,6 +220,80 @@
 .navUser {
     width: auto;
     order: 2;
+    flex-grow: 1;
+}
+
+.navUser-action {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    svg {
+        height: 20px;
+    }
+
+    svg.icon-search:hover {
+        -o-transform:rotate(-5deg);
+        -ms-transform:rotate(-5deg);
+        -moz-transform:rotate(-5deg);
+        -webkit-transform:rotate(-5deg);
+        transform:rotate(-5deg);
+    }
+}
+
+.navPage-subMenu {
+    width: 850px;
+}
+.navPage-subMenu-item {
+
+    .navPages-action {
+        text-transform: uppercase;
+    }
+
+}
+
+// Icons
+.navUser-item--cart {
+
+    .navUser-action {
+        padding-right: 0;
+    }
+    
+}
+
+li.navUser-item {
+    border-right: 1px dotted #c1c1c1;
+    line-height: 10px;
+}
+
+li.navUser-item:last-child {
+    border-right: 0;
+}
+
+
+// Cart Counter
+.countPill {
+    display: block;
+    background-color: transparent;
+    font-size: 11px;
+    font-weight: 600;
+    color: $blue;
+    position: absolute;
+    top: -9px;
+    left: calc(100% + -2px);
+    margin: 0;
+}
+
+// Search Dropdown - Slide Left Animation
+.dropdown--quickSearch.is-open {
+    background-color: white;
+    position: fixed;
+    width: 30% !important;
+    height: 100vh;
+    margin-left: auto;
+}
+
+.dropdown--quickSearch .container {
+    padding: 45px 0;
 }
 
 
