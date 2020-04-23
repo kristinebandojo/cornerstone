@@ -186,6 +186,16 @@
     }
 }
 
+// Dropdown Menu to display on 'Hover' instead of 'On Click'
+#menu {
+
+    .navPages {
+
+        ul.navPages-list > li.navPages-item:hover > a + div.navPage-subMenu {
+            display: block;
+        }
+    }
+}
 
 //
 // Mobile Menu Toggle
