@@ -22,6 +22,9 @@
     top: 0;
     width: 100%;
     z-index: zIndex("higher");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @include breakpoint("medium") {
         border-bottom: container("border");
@@ -42,6 +45,7 @@
     font-size: 0;   // 1
     margin: 0 remCalc($header-toggle-width); // 2
     text-align: center;
+    order: -1;
 
     @include breakpoint("small") { // 4
         margin-left: remCalc($header-toggle-width * 1.5);
@@ -49,7 +53,7 @@
     }
 
     @include breakpoint("medium") {
-        margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
+        margin: 0;
         padding: 0;
 
         .header.fixed & {
@@ -195,7 +199,25 @@
             display: block;
         }
     }
+
 }
+
+
+// Customize Nav Menu Items
+.navPages-action {
+    font-size: 11px;
+    letter-spacing: 1.25px;
+}
+
+.navPages-container {
+    order: 1;
+}
+
+.navUser {
+    width: auto;
+    order: 2;
+}
+
 
 //
 // Mobile Menu Toggle
