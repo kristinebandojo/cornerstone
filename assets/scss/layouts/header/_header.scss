@@ -62,6 +62,11 @@
         }
     }
 
+    svg {
+        width: 200px;
+        height: auto;
+    }
+
     > a {
         @include clearfix;
         color: $storeName-color;
@@ -180,6 +185,7 @@
         max-height: none;
     }
 }
+
 
 //
 // Mobile Menu Toggle
